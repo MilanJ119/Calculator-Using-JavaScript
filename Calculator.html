@@ -1,0 +1,228 @@
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #top {
+            margin-top: 70px;
+            background-color: black;
+            width: 300px;
+            height: 460px;
+            border-radius: 30px;
+        }
+
+        #tab{
+            margin-top: 50px;
+        }
+        #t1 {
+            background-color: rgb(192, 192, 192);
+            height: 60px;
+            width: 260px;
+            border: 2px solid rgb(90, 90, 90);
+            border-radius: 20px;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        .buttons {
+            height: 60px;
+            width: 60px;
+            border-radius: 30px;
+            font-size: 30px;
+            background-color: rgb(253, 253, 147);
+        }
+        .buttons:active{
+            background-color: rgb(250, 250, 110);
+            font-size: 32px;
+        }
+        body{
+            background-color: crimson;
+            /* width: 700p; */
+            background-image: url(calc.jpg);
+        }
+    </style>
+    <script>
+        z = "";
+        function back() {
+            z = z.substring(0, z.length - 1);
+            document.getElementById('t1').value = z;
+        }
+        function c() {
+            z ="";
+            document.getElementById('t1').value = z;
+        }
+        function upon() {
+            z = 1 / z;
+            document.getElementById('t1').value = z;
+        }
+        function sqrt() {
+            z = Math.sqrt(z);
+            document.getElementById('t1').value = z;
+
+        }
+        // ....................................................................................................................
+
+        function val9() {
+            z = z + document.getElementById('9').value;
+            document.getElementById('t1').value = z;
+        }
+        function val8() {
+            z = z + document.getElementById('8').value;
+            document.getElementById('t1').value = z;
+        }
+        function val7() {
+            z = z + document.getElementById('7').value;
+            document.getElementById('t1').value = z;
+        }
+        function add() {
+            z = z + document.getElementById('add').value;
+            document.getElementById('t1').value = z;
+        }
+        // ................................................................................................................
+        function val6() {
+            z = z + document.getElementById('6').value;
+            document.getElementById('t1').value = z;
+        }
+        function val5() {
+            z = z + document.getElementById('5').value;
+            document.getElementById('t1').value = z;
+        }
+        function val4() {
+            z = z + document.getElementById('4').value;
+            document.getElementById('t1').value = z;
+        }
+        function sub() {
+            z = z + document.getElementById('sub').value;
+            document.getElementById('t1').value = z;
+        }
+        // ................................................................................................................
+        function val3() {
+            z = z + document.getElementById('3').value;
+            document.getElementById('t1').value = z;
+        }
+        function val2() {
+            z = z + document.getElementById('2').value;
+            document.getElementById('t1').value = z;
+        }
+        function val1() {
+            z = z + document.getElementById('1').value;
+            document.getElementById('t1').value = z;
+        }
+        function mul() {
+            z = z + document.getElementById('mul').value;
+            document.getElementById('t1').value = z;
+        }
+        // ................................................................................................................
+        function dot() {
+            z = z + document.getElementById('dot').value;
+            document.getElementById('t1').value = z;
+        }
+        function val0() {
+            z = z + document.getElementById('0').value;
+            document.getElementById('t1').value = z;
+        }
+        function equals() {
+            document.getElementById('t1').value = "" + eval(z);
+            z = document.getElementById('t1').value;
+
+        }
+        function div() {
+            z = z + document.getElementById('div').value;
+            document.getElementById('t1').value = z;
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <p>
+        <div id="top"><input id="t1" dir="rtl" type="text">
+            <table id="tab">
+                <tr>
+                    <td>
+                        <input type="button" class="buttons" value="B" id="B" onclick="back()">
+                    </td>
+                    <td>
+                        <input type="button" class="buttons" value="C" id="C" onclick="c()">
+                    </td>
+                    <td>
+                        <input type="button" class="buttons" id="upon" value="1/x" onclick="upon()">
+                    </td>
+                    <td>
+                        <input type="button" class="buttons" id="sqrt" value="sqrt" onclick="sqrt()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="buttons" id="7" value="7" onclick="val7()">
+                    </td>
+                    <td>
+                        <input type="button" class="buttons" id="8" value="8" onclick="val8()">
+                    </td>
+
+                    <td>
+                        <input type="button" class="buttons" id="9" value="9" onclick="val9()">
+                    </td>
+                    <td>
+                        <input type="button" class="buttons" id="div" value="/" onclick="div()">
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="buttons" id="4" value="4" onclick="val4()">
+                    </td>
+
+                    <td>
+                        <input type="button" class="buttons" id="5" value="5" onclick="val5()">
+                    </td>
+                    <td>
+                        <input type="button" class="buttons" id="6" value="6" onclick="val6()">
+                    </td>
+                    <td>
+                        <input type="button" class="buttons" id="mul" value="*" onclick="mul()">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="buttons" id="1" value="1" onclick="val1()">
+                    </td>
+
+                    <td>
+                        <input type="button" class="buttons" id="2" value="2" onclick="val2()">
+                    </td>
+                    <td>
+                        <input type="button" class="buttons" id="3" value="3" onclick="val3()">
+                    </td>
+                    <td>
+                        <input type="button" class="buttons" id="sub" value="-" onclick="sub()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="buttons" id="0" value="0" onclick="val0()">
+                    </td>
+                    <td>
+                        <input type="button" class="buttons" id="dot" value="." onclick="dot()">
+                    </td>
+
+                    <td>
+                        <input type="button" class="buttons" id="equals" value="=" onclick="equals()">
+                    </td>
+                    <td>
+                        <input type="button" class="buttons" id="add" value="+" onclick="add()">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </p>
+    </center>
+</body>
+
+</html>
